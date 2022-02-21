@@ -1,0 +1,10 @@
+<h1 *ngIf="student">scores de {{student.fname}}</h1>
+<table *ngIf="student">
+  <tr  *ngFor="let score of student.score">
+    <td>{{score.exam}} = {{score.value}}</td>
+  </tr>
+  <nav>
+    <button (click)="studentChange.emit(-1)"><</button>
+    <button (click)="studentChange.emit(1)">></button>
+  </nav>
+</table>
